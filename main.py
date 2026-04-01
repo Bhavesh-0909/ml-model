@@ -57,7 +57,7 @@ def detect_email(payload: EmailPayload):
         pred_int = int(raw_prediction)
         
         # Map the dataset's integer labels back to text (0 = ham, 1 = spam)
-        label_map = {0: "ham", 1: "spam"}
+        label_map = {0: "ham", 2: "spam"}
         final_prediction = label_map.get(pred_int, "unknown")
 
         # Get probabilities and convert the highest one to a standard float
