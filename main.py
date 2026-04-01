@@ -52,7 +52,7 @@ def detect_email(payload: EmailPayload):
     try:
         # predict() returns an array, we take the first element
         raw_prediction = model.predict([payload.text])[0]
-        
+        print("raw ", raw_prediction)
         # CONVERT numpy.int64 to standard Python int
         pred_int = int(raw_prediction)
         
